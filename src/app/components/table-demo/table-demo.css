@@ -1,0 +1,33 @@
+.table-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 1rem;
+}
+
+input[type="text"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th {
+  cursor: pointer;
+  user-select: none;
+  padding-right: 1rem;
+}
+
+td {
+  padding: 8px;
+  border-top: 1px solid #ccc;
+}
+
+th span {
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}

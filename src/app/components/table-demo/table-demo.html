@@ -1,0 +1,36 @@
+<div class="table-container">
+    <input type="text" [(ngModel)]="searchText" placeholder="Filtrar por texto..." />
+
+    <table>
+        <thead>
+            <tr>
+                <th appSortable="name" (sort)="sortTable($event)">
+                    Nombre
+                    <span *ngIf="sortColumn === 'name'">
+                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+                    </span>
+                </th>
+                <th appSortable="role" (sort)="sortTable($event)">
+                    Rol
+                    <span *ngIf="sortColumn === 'role'">
+                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+                    </span>
+                </th>
+                <th appSortable="age" (sort)="sortTable($event)">
+                    Edad
+                    <span *ngIf="sortColumn === 'age'">
+                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+                    </span>
+                </th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let person of filteredData">
+                <td>{{ person.name }}</td>
+                <td>{{ person.role }}</td>
+                <td>{{ person.age }}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>

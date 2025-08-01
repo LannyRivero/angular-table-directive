@@ -64,6 +64,7 @@ Aquí puedes ver el funcionamiento completo de la directiva en acción:
   Tu navegador no soporta la reproducción de video.
 </video>
 ```
+[![Ver demo](https://github.com/TU_USUARIO/TU_REPO/blob/main/src/assets/demo-thumbnail.png)](https://github.com/TU_USUARIO/TU_REPO/blob/main/src/assets/demo.mp4)
 
 ---
 ## 📦 Ejemplo en uso

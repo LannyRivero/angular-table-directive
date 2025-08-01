@@ -65,6 +65,9 @@ Aquí puedes ver el funcionamiento completo de la directiva en acción:
 </video>
 ```
 [![Ver demo](https://github.com/TU_USUARIO/TU_REPO/blob/main/src/assets/demo-thumbnail.png)](https://github.com/TU_USUARIO/TU_REPO/blob/main/src/assets/demo.mp4)
+[![Ver demo](https://github.com/LannyRivero/angular-table-directive/blob/main/src/assets/demo-thumbnail.png)](https://github.com/LannyRivero/angular-table-directive/blob/main/src/assets/demo-video.mp4)
+
+
 
 ---
 ## 📦 Ejemplo en uso

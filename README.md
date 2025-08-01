@@ -54,6 +54,18 @@ Luego abre:
 
 ---
 
+## 🎥 Demostración en video
+Aquí puedes ver el funcionamiento completo de la directiva en acción:
+
+📁 El video se encuentra dentro del repositorio (src/assets/demo.mp4)
+
+```bash
+<video src="src/assets/demo.mp4" controls width="600">
+  Tu navegador no soporta la reproducción de video.
+</video>
+```
+
+---
 ## 📦 Ejemplo en uso
 
 ```bash
@@ -63,9 +75,23 @@ Luego abre:
 | Marta  | Frontend Dev    | 28   |
 | Carlos | Project Manager | 45   |
 ```
-- Puedes escribir "Dev" o "39" en el input de búsqueda y ver cómo se filtra.
-- Haz clic en los encabezados para ordenar (por nombre, rol o edad).
+- 🔍Puedes escribir "Dev" o "39" en el input de búsqueda y ver cómo se filtra.
+- 🧭Haz clic en los encabezados para ordenar (por nombre, rol o edad).
 ---
+
+## 🔄 Reutiliza esta directiva
+Puedes usar appSortable en cualquier tabla de tu app Angular para agregar ordenación:
+
+Importa la directiva TableSortFilterDirective en tu componente.
+
+Usa (sort)="tuMétodoDeOrdenado($event)" en los encabezados <th>:
+
+```bash
+<th appSortable="nombre" (sort)="sortBy('nombre')">Nombre</th>
+```
+Asegúrate de implementar una función sortBy que actualice las propiedades sortColumn y sortDirection.
+---
+
 
 ## 🧪 Tests y mejora futura
 - ✔️ Comportamiento validado visualmente

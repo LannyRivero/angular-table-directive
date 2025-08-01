@@ -1,59 +1,85 @@
-# TablaDirectiva
+# 📊 Angular Table Directive – Código Samurái Reto
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 20.1.4.
+Este proyecto es parte del curso de Angular de Código Samurái. Consiste en crear una directiva personalizada que permite ordenar y filtrar tablas dinámicamente.
 
-## Development server
+---
 
-To start a local development server, run:
+## 🎯 Objetivo
 
+- Crear una directiva reutilizable para ordenación (`appSortable`)
+- Aplicar filtrado dinámico por texto
+- Mostrar tabla con datos simulados (nombre, rol, edad)
+- Añadir mejoras visuales como flechas 🔼🔽 y estilos al encabezado activo
+
+---
+
+## 🧱 Estructura del proyecto
+```bash
+src/
+├── app/
+│ ├── components/
+│ │ └── table-demo/
+│ │ ├── table-demo.ts
+│ │ ├── table-demo.html
+│ │ └── table-demo.css
+│ └── directives/
+│ └── table-sort-filter.directive.ts
+```
+---
+
+## 🔧 Cómo usarlo
+
+# Clona el repositorio
+```bash
+git clone https://github.com/tu-usuario/angular-table-directive.git
+```
+
+# Entra al proyecto
+```bash
+cd angular-table-directive
+```
+
+# Instala dependencias
+```bash
+npm install
+```
+
+# Ejecuta la app
 ```bash
 ng serve
 ```
+Luego abre:
+👉 http://localhost:4200
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
 
-## Code scaffolding
+---
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
-
-```bash
-ng generate component component-name
-```
-
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+## 📦 Ejemplo en uso
 
 ```bash
-ng generate --help
+| Nombre | Rol             | Edad |
+| ------ | --------------- | ---- |
+| Lanny  | QA Tester       | 39   |
+| Marta  | Frontend Dev    | 28   |
+| Carlos | Project Manager | 45   |
 ```
+- Puedes escribir "Dev" o "39" en el input de búsqueda y ver cómo se filtra.
+- Haz clic en los encabezados para ordenar (por nombre, rol o edad).
+---
 
-## Building
+## 🧪 Tests y mejora futura
+- ✔️ Comportamiento validado visualmente
 
-To build the project run:
+- 🧪 Se puede ampliar con tests unitarios (Vitest o Jasmine)
 
-```bash
-ng build
-```
+- 🔜 Posibles mejoras: paginación, exportar a Excel, orden múltiple
+  
+---
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+## ✨ Autor
 
-## Running unit tests
+Lanny Rivero Canino
+- 🎓 Reto Angular – Código Samurái 2025
+- 👩‍💻 QA Tester & Frontend Developer
+- 🔗  [LinkedIn](https://www.linkedin.com/in/lanny-rivero/)
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
-
-```bash
-ng test
-```
-
-## Running end-to-end tests
-
-For end-to-end (e2e) testing, run:
-
-```bash
-ng e2e
-```
-
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
-
-## Additional Resources
-
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.

@@ -92,7 +92,6 @@ Usa (sort)="tuMétodoDeOrdenado($event)" en los encabezados <th>:
 Asegúrate de implementar una función sortBy que actualice las propiedades sortColumn y sortDirection.
 ---
 
-
 ## 🧪 Tests y mejora futura
 - ✔️ Comportamiento validado visualmente
 

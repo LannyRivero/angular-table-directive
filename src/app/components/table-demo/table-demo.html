@@ -1,36 +1,49 @@
 <div class="table-container">
-    <input type="text" [(ngModel)]="searchText" placeholder="Filtrar por texto..." />
+  <h2>📊 Tabla Interactiva con Directiva Angular</h2>
+  <p>Filtra y ordena los datos dinámicamente</p>
 
-    <table>
-        <thead>
-            <tr>
-                <th appSortable="name" (sort)="sortTable($event)">
-                    Nombre
-                    <span *ngIf="sortColumn === 'name'">
-                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
-                    </span>
-                </th>
-                <th appSortable="role" (sort)="sortTable($event)">
-                    Rol
-                    <span *ngIf="sortColumn === 'role'">
-                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
-                    </span>
-                </th>
-                <th appSortable="age" (sort)="sortTable($event)">
-                    Edad
-                    <span *ngIf="sortColumn === 'age'">
-                        {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
-                    </span>
-                </th>
-            </tr>
-        </thead>
+  <input
+    type="text"
+    [(ngModel)]="searchText"
+    placeholder="🔍 Filtrar por nombre, rol o edad..."
+  />
 
-        <tbody>
-            <tr *ngFor="let person of filteredData">
-                <td>{{ person.name }}</td>
-                <td>{{ person.role }}</td>
-                <td>{{ person.age }}</td>
-            </tr>
-        </tbody>
-    </table>
+  <table>
+    <thead>
+      <tr>
+        <th appSortable="name" (sort)="sortTable('name')">
+          Nombre
+          <span *ngIf="sortColumn === 'name'">
+            {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+          </span>
+        </th>
+        <th appSortable="role" (sort)="sortTable('role')">
+          Rol
+          <span *ngIf="sortColumn === 'role'">
+            {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+          </span>
+        </th>
+        <th appSortable="age" (sort)="sortTable('age')">
+          Edad
+          <span *ngIf="sortColumn === 'age'">
+            {{ sortDirection === 'asc' ? '🔼' : '🔽' }}
+          </span>
+        </th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let person of filteredData">
+        <td>{{ person.name }}</td>
+        <td>{{ person.role }}</td>
+        <td>{{ person.age }}</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p *ngIf="filteredData.length === 0">No se encontraron resultados.</p>
+  <p *ngIf="filteredData.length > 0">
+    Mostrando {{ filteredData.length }} resultado{{ filteredData.length === 1 ? '' : 's' }}.
+  </p>
 </div>
+
